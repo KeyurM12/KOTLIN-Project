@@ -19,12 +19,16 @@ class MainActivity3 : AppCompatActivity() {
             var i = 1
             var str:String =""
             var num = input_num.text.toString().toInt()
-            while(i!=num)
+            while(true)
             {
+                if(i==num)
+                {
+                    str+="$i"
+                    break;
+                }
                 str+="$i@"
                 i++
             }
-            str+="$i"
             txt1.text=str
         })
 
