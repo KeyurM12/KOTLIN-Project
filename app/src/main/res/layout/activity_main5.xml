@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity5">
+
+    <EditText
+        android:id="@+id/temp1"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="106dp"
+        android:ems="10"
+        android:hint="Temperature"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/read1"
+        android:layout_width="164dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="231dp"
+        android:layout_marginTop="106dp"
+        android:ems="10"
+        android:hint="Reading"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ma5"
+        android:layout_width="223dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="181dp"
+        android:text="Check Status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/res1_ma5"
+        android:layout_width="378dp"
+        android:layout_height="271dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="271dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

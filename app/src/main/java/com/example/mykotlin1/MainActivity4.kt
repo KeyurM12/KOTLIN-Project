@@ -39,21 +39,21 @@ class MainActivity4 : AppCompatActivity() {
 
         })
     }
-}
-fun add(a:Int, b:Int): Int {
-    return a+b
-}
-fun sub(a:Int, b:Int): Int {
-    return a-b
-}
-fun mul(a:Int, b:Int): Int {
-    return a*b
-}
-fun div(a:Int, b:Int): Int {
-    if(b==0) return 0
-    return a/b
-}
-fun mod(a:Int, b:Int): Int {
-    if(b==0) return 0
-    return a%b
+    fun add(a:Int, b:Int): Int {
+        return a+b
+    }
+    fun sub(a:Int, b:Int): Int {
+        return a-b
+    }
+    fun mul(a:Int, b:Int): Int {
+        return a*b
+    }
+    fun div(a:Int, b:Int): Int {
+        if(b==0) return 0
+        return a/b
+    }
+    fun mod(a:Int, b:Int): Int {
+        if(b==0) return 0
+        return a%b
+    }
 }
