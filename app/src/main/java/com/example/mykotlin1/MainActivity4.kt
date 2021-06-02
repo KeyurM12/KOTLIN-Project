@@ -1,5 +1,6 @@
 package com.example.mykotlin1
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 import org.w3c.dom.Text
 
 class MainActivity4 : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
@@ -23,19 +25,35 @@ class MainActivity4 : AppCompatActivity() {
         btn.setOnClickListener(View.OnClickListener {
             var num1 = input_num1.text.toString().toInt()
             var num2 = input_num2.text.toString().toInt()
-            var res:Int = 0
+            var res:String = ""
             var oper:String = spinner1.selectedItem.toString()
             when(oper) {
-                "+" -> res = num1 + num2
-                "-" -> res = num1 - num2
-                "x" -> res = num1 * num2
-                "/" -> if (num2 == 0) {res = 0} else {res = num1/num2}
-                "%" -> if (num2 == 0) {res = 0} else {res = num1%num2}
+                "+" -> res = "${add(num1,num2)}"
+                "-" -> res = "${sub(num1,num2)}"
+                "x" -> res = "${mul(num1,num2)}"
+                "/" -> res = "${div(num1,num2)}"
+                "%" -> res = "${mod(num1,num2)}"
 
             }
             result.text = "Result is : $res"
 
         })
-
     }
+}
+fun add(a:Int, b:Int): Int {
+    return a+b
+}
+fun sub(a:Int, b:Int): Int {
+    return a-b
+}
+fun mul(a:Int, b:Int): Int {
+    return a*b
+}
+fun div(a:Int, b:Int): Int {
+    if(b==0) return 0
+    return a/b
+}
+fun mod(a:Int, b:Int): Int {
+    if(b==0) return 0
+    return a%b
 }
