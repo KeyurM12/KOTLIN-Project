@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -20,9 +21,6 @@ class MainActivity7 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main7)
-
-
-
     }
 
     fun coinAppear(view: View)
@@ -51,12 +49,13 @@ class MainActivity7 : AppCompatActivity() {
         {
             res.text = if(playerActive == 1) "Black Wins" else "White Wins"
             gameActive = false
-
+            findViewById<Button>(R.id.btn_ma7).visibility=View.VISIBLE
         }
         else if(drawCheck())
         {
             res.text = "Draw Game"
             gameActive = false
+            findViewById<Button>(R.id.btn_ma7).visibility=View.VISIBLE
         }
         Log.i("Activity","$gameActive $playerActive")
 
@@ -103,6 +102,28 @@ class MainActivity7 : AppCompatActivity() {
             }
         }
         return true
+    }
+
+    fun playAgain(view:View)
+    {
+        gameState = arrayOf(arrayOf(0,0,0),arrayOf(0,0,0),arrayOf(0,0,0))
+        playerActive = 1
+        gameActive = true
+
+        findViewById<ImageView>(R.id.img11_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img12_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img13_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img21_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img22_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img23_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img31_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img32_ma7).setImageResource(0)
+        findViewById<ImageView>(R.id.img33_ma7).setImageResource(0)
+
+        findViewById<TextView>(R.id.txt_ma7).text = "Tic Tac Toe"
+        findViewById<Button>(R.id.btn_ma7).visibility=View.GONE
+
+
     }
 
 }
