@@ -1,5 +1,6 @@
 package com.example.mykotlin1
 
+import android.os.Build.VERSION_CODES.O
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -35,19 +36,19 @@ class MainActivity7 : AppCompatActivity() {
         {
             if(playerActive==1)
             {
-                img.setImageResource(R.drawable.white)
+                img.setImageResource(R.drawable.o)
                 playerActive = 2
                 gameState[row][col] = 2
             }
             else{
-                img.setImageResource(R.drawable.black)
+                img.setImageResource(R.drawable.x)
                 playerActive = 1
                 gameState[row][col] = 1
             }
         }
         if(rowCheck(row,playerActive) || colCheck(col,playerActive) || diaCheck())
         {
-            res.text = if(playerActive == 1) "Black Wins" else "White Wins"
+            res.text = if(playerActive == 1) "X Wins" else "O Wins"
             gameActive = false
             findViewById<Button>(R.id.btn_ma7).visibility=View.VISIBLE
         }
