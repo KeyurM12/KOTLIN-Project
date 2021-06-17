@@ -25,7 +25,7 @@
             android:progress="4" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView_aq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="What is JVM"
