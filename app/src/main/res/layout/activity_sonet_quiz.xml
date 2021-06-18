@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#590707"
-                android:text="Button" />
+                android:text="Start" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

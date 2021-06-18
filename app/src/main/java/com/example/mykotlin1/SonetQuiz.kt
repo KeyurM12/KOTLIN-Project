@@ -23,6 +23,7 @@ class SonetQuiz : AppCompatActivity() {
             } else
             {
                 var next:Intent = Intent(this,QuizActivity()::class.java)
+                next.putExtra("name",q_name.text.toString())
                 startActivity(next)
                 finish()
 
