@@ -15,7 +15,7 @@ class NoteTakingScreen2Activity : AppCompatActivity() {
         adapterOfCourses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         var spinner = findViewById<Spinner>(R.id.spinner_nts)
-        spinner.adapter = adapterOfCourses
+        spinner.adapter = adapterOfCourses;
 
     }
 }
